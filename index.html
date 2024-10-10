@@ -1,40 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="main.css">
-  <title>Frontend Mentor | Contact form</title>
-</head>
-<body>
-  Contact Us
-
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  <script src="main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <main>
+      <h1>Contact Us</h1>
+      <form id="contact-form" novalidate>
+        <fieldset class="inputs-container">
+          <legend>Name</legend>
+          <fieldset class="input-container first-name-input-container">
+            <legend>First Name</legend>
+            <label for="first-name" class="field-label">First Name</label>
+            <input
+              id="first-name"
+              class="form-input"
+              type="text"
+              name="first-name"
+              autocomplete="name"
+              aria-invalid="false"
+              aria-describedby="first-name-error-label"
+            />
+            <p class="error-message hidden" id="first-name-error-label"></p>
+          </fieldset>
+          <fieldset class="input-container last-name-input-container">
+            <legend>Last Name</legend>
+            <label for="last-name" class="field-label">Last Name</label>
+            <input
+              id="last-name"
+              class="form-input"
+              type="text"
+              name="last-name"
+              aria-invalid="false"
+              autocomplete="name"
+              aria-describedby="last-name-error-label"
+            />
+            <p class="error-message hidden" id="last-name-error-label"></p>
+          </fieldset>
+        </fieldset>
+        <fieldset class="input-container email-container">
+          <legend>Email Address</legend>
+          <label for="email" class="field-label">Email Address</label>
+          <input
+            id="email"
+            class="form-input"
+            type="email"
+            name="email"
+            aria-invalid="false"
+            aria-describedby="email-error-label"
+          />
+          <p class="error-message hidden" id="email-error-label"></p>
+        </fieldset>
+        <fieldset class="input-container =query-type-container">
+          <legend>Query Type</legend>
+          <p class="field-label">Query Type</p>
+          <div class="query-type-inputs">
+            <div class="radio-button-container">
+              <input
+                id="general-enquiry"
+                class="radio-button"
+                type="radio"
+                name="query-type"
+                value="1"
+                checked
+                aria-invalid="false"
+                aria-describedby="query-type-error-label"
+              />
+              <label class="radio-label" for="general-enquiry"
+                >General Enquiry</label
+              >
+            </div>
+            <div class="radio-button-container">
+              <input
+                id="support-request"
+                class="radio-button"
+                type="radio"
+                name="query-type"
+                value="2"
+                aria-invalid="false"
+                aria-describedby="query-type-error-label"
+              />
+              <label class="radio-label" for="support-request"
+                >Support Request</label
+              >
+            </div>
+          </div>
+          <p class="error-message hidden" id="query-type-error-label"></p>
+        </fieldset>
+        <fieldset class="input-container message-container">
+          <legend>Message</legend>
+          <label for="message" class="field-label">Message</label>
+          <textarea
+            id="message"
+            class="form-input"
+            name="message"
+            rows="3"
+            aria-invalid="false"
+            aria-describedby="message-error-label"
+          ></textarea>
+          <p class="error-message hidden" id="message-error-label"></p>
+        </fieldset>
+        <fieldset class="consent-container">
+          <legend>Consent</legend>
+          <div class="consent-box-container">
+            <input
+              id="consent-box"
+              class="checkbox"
+              type="checkbox"
+              name="consent"
+              aria-invalid="false"
+              aria-describedby="consent-box-error-label"
+            />
+            <label for="consent-box" class="field-label"
+              >I consent to being contacted by the team</label
+            >
+          </div>
+          <p class="error-message hidden" id="consent-box-error-label"></p>
+        </fieldset>
+        <button id="submit-button">Submit</button>
+      </form>
+    </main>
+    <script src="main.js"></script>
+  </body>
 </html>
