@@ -16,11 +16,7 @@ const consentBoxErrorLabel = document.getElementById("consent-box-error-label");
 const submitButton = document.getElementById("submit-button");
 
 const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-const isValidInput = (value) => {
-  return value !== "";
-};
-
+const isValidInput = (value) => value !== undefined && value !== "";
 const toCamelCase = (str) => {
   return str
     .split("-")
