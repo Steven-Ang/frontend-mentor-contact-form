@@ -181,6 +181,7 @@ textarea {
   cursor: pointer;
   letter-spacing: 0.2ch;
   font-weight: bold;
+  margin-top: 1em;
 }
 
 #success-popup {
