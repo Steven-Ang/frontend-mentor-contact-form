@@ -103,7 +103,6 @@ textarea {
 
 .field-label {
   cursor: pointer;
-  font-weight: bold;
   color: var(--dark-grey);
 }
 
